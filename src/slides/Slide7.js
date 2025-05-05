@@ -1,6 +1,7 @@
 // Slide7.js - Structure du projet - Version améliorée
 import React from 'react';
 import Slide from '../Slide';
+import '../styles/code.css';
 
 const Slide7 = ({ isActive }) => {
   return (

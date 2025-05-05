@@ -1,5 +1,6 @@
 // ThemeSwitcher.js - Component to toggle between light and dark themes
 import React from 'react';
+import '../../styles/navigation.css';
 
 const ThemeSwitcher = ({ isDarkMode, toggleTheme }) => {
   return (

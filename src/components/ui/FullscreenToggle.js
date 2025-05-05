@@ -1,5 +1,6 @@
 // FullscreenToggle.js - Button to toggle fullscreen mode
 import React, { useState, useEffect } from 'react';
+import '../../styles/navigation.css';
 
 const FullscreenToggle = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);

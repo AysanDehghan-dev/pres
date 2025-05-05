@@ -1,5 +1,6 @@
 // SlideNavigator.js - Component to navigate to a specific slide by number
 import React, { useState } from 'react';
+import '../../styles/navigation.css';
 
 const SlideNavigator = ({ totalSlides, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);

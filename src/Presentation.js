@@ -1,24 +1,18 @@
-// Presentation.js - Main controller component with improved container
 import React, { useState, useEffect, useCallback } from 'react';
-import SlidePreview from './SlidePreview';
-import ThemeSwitcher from './ThemeSwitcher';
-import ProgressBar from './ProgressBar';
-import PresentationTimer from './PresentationTimer';
-import FullscreenToggle from './FullscreenToggle';
-import SlideNavigator from './SlideNavigator';
-import './Presentation.css';
+import './styles/Presentation.css';
 
-// Import all slides
-import Slide1 from './slides/Slide1';
-import Slide2 from './slides/Slide2';
-import Slide3 from './slides/Slide3';
-import Slide4 from './slides/Slide4';
-import Slide5 from './slides/Slide5';
-import Slide6 from './slides/Slide6';
-import Slide7 from './slides/Slide7';
-import Slide8 from './slides/Slide8';
-import Slide9 from './slides/Slide9';
-import Slide10 from './slides/Slide10';
+// Import des composants
+import { 
+  ThemeSwitcher, 
+  FullscreenToggle, 
+  SlideNavigator, 
+  ProgressBar, 
+  PresentationTimer,
+  SlidePreview 
+} from './components/ui';
+
+// Import des slides
+import { slides } from './slides';
 
 // Accessible emoji component
 export const AccessibleEmoji = ({ symbol, label }) => (
@@ -31,26 +25,12 @@ const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(false);
   
-  // Array of slide components
-  const slides = [
-    <Slide1 key="1" />,
-    <Slide2 key="2" />,
-    <Slide3 key="3" />,
-    <Slide4 key="4" />,
-    <Slide5 key="5" />,
-    <Slide6 key="6" />,
-    <Slide7 key="7" />,
-    <Slide8 key="8" />,
-    <Slide9 key="9" />,
-    <Slide10 key="10" />
-  ];
-  
   // Toggle between light and dark themes
   const toggleTheme = useCallback(() => {
     setIsDarkMode(prevMode => !prevMode);
   }, []);
   
-  // Use useCallback to memoize these functions so they don't change on every render
+  // Navigation functions
   const nextSlide = useCallback(() => {
     setCurrentSlide(prevSlide => {
       if (prevSlide < slides.length - 1) {
@@ -58,7 +38,7 @@ const Presentation = () => {
       }
       return prevSlide;
     });
-  }, [slides.length]);
+  }, []);
   
   const prevSlide = useCallback(() => {
     setCurrentSlide(prevSlide => {
@@ -89,7 +69,7 @@ const Presentation = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [nextSlide, prevSlide, slides.length]);
+  }, [nextSlide, prevSlide]);
   
   // Update active slide classes
   useEffect(() => {

@@ -1,5 +1,6 @@
 // PresentationTimer.js - Timer component for tracking presentation duration
 import React, { useState, useEffect } from 'react';
+import '../../styles/navigation.css';
 
 const PresentationTimer = ({ isRunning = true, totalTimeInMinutes = 15 }) => {
   const [seconds, setSeconds] = useState(0);

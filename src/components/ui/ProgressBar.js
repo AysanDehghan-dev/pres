@@ -1,5 +1,6 @@
 // ProgressBar.js - Progress indicator for presentation
 import React from 'react';
+import '../../styles/navigation.css';
 
 const ProgressBar = ({ current, total }) => {
   const progress = ((current + 1) / total) * 100;

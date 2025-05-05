@@ -1,5 +1,6 @@
 // SlidePreview.js - Component to display slide thumbnails for quick navigation
 import React from 'react';
+import '../../styles/slidepreview.css';
 
 const SlidePreview = ({ slides, currentSlide, onSlideSelect }) => {
   return (

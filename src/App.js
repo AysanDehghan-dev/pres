@@ -1,6 +1,6 @@
 import React from 'react';
 import Presentation from './Presentation';
-import './App.css';
+import './styles/App.css';  // Chemin mis à jour
 
 function App() {
   return (
