@@ -57,10 +57,6 @@ const Slide9 = ({ isActive }) => {
           </div>
         </div>
       </div>
-      
-      <div className="text-center" style={{ fontSize: '1.25rem', fontWeight: 'bold', color: 'var(--primary)' }}>
-        Merci de votre attention !
-      </div>
     </Slide>
   );
 };

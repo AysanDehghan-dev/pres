@@ -324,12 +324,50 @@ p {
   line-height: 1.5;
   color: var(--text-primary);
   border: 1px solid var(--border);
+  text-align: left; /* Alignement à gauche explicite */
+}
+.code-block pre,
+.code-block code {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
 }
 
-/* Tree view styling */
+/* S'assurer que les éléments dans les blocs de code sont alignés à gauche */
+.slide pre,
+.slide code {
+  text-align: left;
+  display: block;
+}
+
+/* S'assurer que le contenu des blocs de code est à gauche même si le parent est centré */
+.slide .flex-col,
+.slide .flex-row,
+.slide .card {
+  text-align: left;
+}
+
+/* Corriger spécifiquement les éléments dans les slides qui pourraient hériter d'un alignement centré */
+.slide .card pre,
+.slide .card code,
+.slide .flex-col pre,
+.slide .flex-col code {
+  text-align: left;
+  margin: 0;
+}
+
+/* Tree view styling - également aligné à gauche */
 .tree-view {
   background-color: transparent;
   border: none;
+  text-align: left;
+}
+
+.tree-view pre,
+.tree-view code {
+  text-align: left;
 }
 
 /* Navigation */
