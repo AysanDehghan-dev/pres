@@ -1,0 +1,184 @@
+/* code.css - Styles des blocs de code */
+
+/* Blocs de code généraux */
+.code-block {
+    background-color: var(--code-bg);
+    padding: 1.25rem;
+    border-radius: var(--border-radius-md);
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 0.875rem;
+    overflow: auto;
+    max-height: 18rem;
+    line-height: 1.6;
+    color: var(--code-text);
+    border: 1px solid var(--border);
+    text-align: left;
+    
+    /* Styles scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-light) var(--surface-variant);
+  }
+  
+  /* Styles scrollbar pour Webkit */
+  .code-block::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .code-block::-webkit-scrollbar-track {
+    background: var(--surface-variant);
+    border-radius: var(--border-radius-md);
+  }
+  
+  .code-block::-webkit-scrollbar-thumb {
+    background-color: var(--primary-light);
+    border-radius: var(--border-radius-md);
+    border: 2px solid var(--surface-variant);
+  }
+  
+  .code-block::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary);
+  }
+  
+  .code-block pre,
+  .code-block code {
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+  }
+  
+  /* Alignement à gauche tous les éléments de code */
+  .slide pre,
+  .slide code {
+    text-align: left;
+    display: block;
+  }
+  
+  /* Styles spécifiques pour les arborescences de fichiers */
+  .tree-structure {
+    font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    background-color: #f8fafc;
+    color: #334155;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+  }
+  
+  .dark-theme .tree-structure {
+    background-color: #0f172a;
+    color: #cbd5e1;
+  }
+  
+  /* Coloration syntaxique pour les arborescences */
+  .tree-structure .directory {
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  .tree-structure .file {
+    color: #ef4444;
+  }
+  
+  .dark-theme .tree-structure .directory {
+    color: #3b82f6;
+  }
+  
+  .dark-theme .tree-structure .file {
+    color: #f87171;
+  }
+  
+  /* Style pour les blocs de code YAML */
+  .code-block .yaml-comment,
+  .code-block .comment {
+    color: #a0aec0;
+  }
+  
+  .code-block .yaml-key {
+    color: #4299e1;
+  }
+  
+  .code-block .yaml-value {
+    color: #68d391;
+  }
+  
+  .dark-theme .code-block .yaml-key {
+    color: #63b3ed;
+  }
+  
+  .dark-theme .code-block .yaml-value {
+    color: #9ae6b4;
+  }
+  
+  /* Styles pour les blocs de code en mode sombre */
+  .dark-theme .code-block {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    border-color: #2d3748;
+  }
+  
+  .dark-theme pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+  }
+  
+  /* Style des scrollbars en mode sombre */
+  .dark-theme .code-block::-webkit-scrollbar-track,
+  .dark-theme pre::-webkit-scrollbar-track {
+    background: #1e293b;
+  }
+  
+  .dark-theme .code-block::-webkit-scrollbar-thumb,
+  .dark-theme pre::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border: 2px solid #1e293b;
+  }
+  
+  .dark-theme .code-block::-webkit-scrollbar-thumb:hover,
+  .dark-theme pre::-webkit-scrollbar-thumb:hover {
+    background-color: #60a5fa;
+  }
+  
+  /* Styles spécifiques pour la Slide 7 (Structure du projet) */
+  .slide:nth-child(7) .card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: none;
+  }
+  
+  .dark-theme .slide:nth-child(7) .card {
+    background-color: #1a2234;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slide:nth-child(7) h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+  }
+  
+  .dark-theme .slide:nth-child(7) h3 {
+    color: #3b82f6;
+  }
+  
+  .slide:nth-child(7) h3 .emoji {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+  }
+  
+  .slide:nth-child(7) p.text-center {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-top: 1.5rem;
+  }
+  
+  .dark-theme .slide:nth-child(7) p.text-center {
+    color: #e2e8f0;
+  }

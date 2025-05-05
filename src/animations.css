@@ -1,0 +1,108 @@
+/* animations.css - Animations et transitions */
+
+/* Animation de fondu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInTree {
+    from { 
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animations avec délai */
+  .anim-delay-1 {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+  }
+  
+  .anim-delay-2 {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  
+  .anim-delay-3 {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  
+  .anim-delay-4 {
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 0.7s;
+    opacity: 0;
+  }
+  
+  /* Animations spécifiques pour Slide 7 */
+  .slide:nth-child(7).active .card {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .slide:nth-child(7).active .card:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .slide:nth-child(7).active p.text-center {
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+  
+  /* Styles spécifiques pour la slide d'intro */
+  .intro-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .intro-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .presenter-name {
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    color: var(--text-secondary);
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+  
+  .presentation-time {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+  }

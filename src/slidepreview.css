@@ -1,0 +1,64 @@
+/* slidepreview.css - Styles de la prévisualisation et numéros à droite */
+
+/* Prévisualisation des slides - Numérotation côté droit */
+.slide-preview {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  
+  .preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(4px);
+  }
+  
+  .dark-theme .preview-container {
+    background-color: rgba(30, 41, 59, 0.7);
+  }
+  
+  .preview-item {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--border-radius-round);
+    background-color: white;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+  
+  .dark-theme .preview-item {
+    background-color: #1a2234;
+    border-color: #2d3748;
+    color: #e2e8f0;
+  }
+  
+  .preview-item:hover {
+    transform: scale(1.1);
+    background-color: var(--primary-bg);
+  }
+  
+  .dark-theme .preview-item:hover {
+    background-color: #172554;
+  }
+  
+  .preview-item.active {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .preview-number {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }

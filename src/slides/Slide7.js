@@ -1,100 +1,106 @@
-// Slide7.js - Structure du projet
+// Slide7.js - Structure du projet - Version améliorée
 import React from 'react';
 import Slide from '../Slide';
 
-// Component that displays the project structure
 const Slide7 = ({ isActive }) => {
   return (
     <Slide isActive={isActive}>
       <h2>Structure du projet</h2>
-      <div className="flex-row" style={{ width: '100%', justifyContent: 'flex-start' }}>
-        <div className="flex-col" style={{ width: '45%', padding: '1rem', backgroundColor: '#f8faff', borderRadius: '8px', marginRight: '2%' }}>
-          <h3 className="flex-row items-center mb-4">
-            <span role="img" aria-label="Code" className="emoji mr-4">&lt;/&gt;</span> Frontend
-          </h3>
-          <div className="code-block tree-view" style={{ height: '24rem', overflow: 'auto', backgroundColor: 'transparent', border: 'none', textAlign: 'left' }}>
-            <pre style={{ color: '#333', textAlign: 'left', margin: 0 }}>
-              <code>
-                <span style={{ color: '#0550ae' }}>frontend/</span><br />
-                ├── <span style={{ color: '#0550ae' }}>public/</span><br />
-                └── <span style={{ color: '#0550ae' }}>src/</span><br />
-                &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>components/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>auth/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>LoginModal.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>PrivateRoute.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>RegisterModal.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>jobs/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>JobCard.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>JobDetailModal.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>layout/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Footer.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Header.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>Layout.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#0550ae' }}>ui/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Button.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Card.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Input.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>Modal.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>context/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>AuthContext.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>ThemeContext.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>hooks/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>useAuth.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>useTheme.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>pages/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Home.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>Jobs.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>Login.tsx</span><br />
-                &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>types/</span><br />
-                &nbsp;&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>index.ts</span><br />
-                &nbsp;&nbsp;&nbsp; └── <span style={{ color: '#0550ae' }}>utils/</span><br />
-                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>formatters.ts</span>
-              </code>
-            </pre>
+      
+      <div className="flex-row gap-8 w-full">
+        <div className="flex-col" style={{ flex: 1 }}>
+          <div className="card mb-4">
+            <h3 className="flex-row items-center mb-4">
+              <span role="img" aria-label="Code" className="emoji mr-4">&lt;/&gt;</span> Frontend
+            </h3>
+            <div className="code-block tree-structure" style={{ height: '24rem', overflow: 'auto' }}>
+              <pre className="text-left">
+                <code>
+                  <span className="directory">frontend/</span><br />
+                  ├── <span className="directory">public/</span><br />
+                  ├── <span className="directory">src/</span><br />
+                  │   ├── <span className="directory">components/</span><br />
+                  │   │   ├── <span className="directory">auth/</span><br />
+                  │   │   │   ├── <span className="file">LoginModal.tsx</span><br />
+                  │   │   │   ├── <span className="file">PrivateRoute.tsx</span><br />
+                  │   │   │   └── <span className="file">RegisterModal.tsx</span><br />
+                  │   │   ├── <span className="directory">jobs/</span><br />
+                  │   │   │   ├── <span className="file">JobCard.tsx</span><br />
+                  │   │   │   └── <span className="file">JobDetailModal.tsx</span><br />
+                  │   │   ├── <span className="directory">layout/</span><br />
+                  │   │   │   ├── <span className="file">Footer.tsx</span><br />
+                  │   │   │   ├── <span className="file">Header.tsx</span><br />
+                  │   │   │   └── <span className="file">Layout.tsx</span><br />
+                  │   │   └── <span className="directory">ui/</span><br />
+                  │   │       ├── <span className="file">Button.tsx</span><br />
+                  │   │       ├── <span className="file">Card.tsx</span><br />
+                  │   │       ├── <span className="file">Input.tsx</span><br />
+                  │   │       └── <span className="file">Modal.tsx</span><br />
+                  │   ├── <span className="directory">context/</span><br />
+                  │   │   ├── <span className="file">AuthContext.tsx</span><br />
+                  │   │   └── <span className="file">ThemeContext.tsx</span><br />
+                  │   ├── <span className="directory">hooks/</span><br />
+                  │   │   ├── <span className="file">useAuth.tsx</span><br />
+                  │   │   └── <span className="file">useTheme.tsx</span><br />
+                  │   ├── <span className="directory">pages/</span><br />
+                  │   │   ├── <span className="file">Home.tsx</span><br />
+                  │   │   ├── <span className="file">Jobs.tsx</span><br />
+                  │   │   └── <span className="file">Login.tsx</span><br />
+                  │   ├── <span className="directory">types/</span><br />
+                  │   │   └── <span className="file">index.ts</span><br />
+                  │   └── <span className="directory">utils/</span><br />
+                  │       └── <span className="file">formatters.ts</span><br />
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
-        <div className="flex-col" style={{ width: '45%', padding: '1rem', backgroundColor: '#f8faff', borderRadius: '8px' }}>
-          <h3 className="flex-row items-center mb-4">
-            <span role="img" aria-label="Serveur" className="emoji mr-4">🖥️</span> Backend
-          </h3>
-          <div className="code-block tree-view" style={{ height: '24rem', overflow: 'auto', backgroundColor: 'transparent', border: 'none', textAlign: 'left' }}>
-            <pre style={{ color: '#333', textAlign: 'left', margin: 0 }}>
-              <code>
-                <span style={{ color: '#0550ae' }}>backend/</span><br />
-                ├── <span style={{ color: '#0550ae' }}>app/</span><br />
-                │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>__init__.py</span><br />
-                │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>models/</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>__init__.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>application.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>company.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>job.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>user.py</span><br />
-                │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>routes/</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>__init__.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>auth.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>companies.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>jobs.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>users.py</span><br />
-                │&nbsp;&nbsp; ├── <span style={{ color: '#0550ae' }}>schemas/</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>__init__.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>application_schema.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>company_schema.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>job_schema.py</span><br />
-                │&nbsp;&nbsp; │&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>user_schema.py</span><br />
-                │&nbsp;&nbsp; └── <span style={{ color: '#0550ae' }}>utils/</span><br />
-                │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>__init__.py</span><br />
-                │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ├── <span style={{ color: '#cf222e' }}>db.py</span><br />
-                │&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; └── <span style={{ color: '#cf222e' }}>security.py</span><br />
-                ├── <span style={{ color: '#cf222e' }}>config.py</span><br />
-                ├── <span style={{ color: '#cf222e' }}>Dockerfile</span><br />
-                ├── <span style={{ color: '#cf222e' }}>pyproject.toml</span><br />
-                └── <span style={{ color: '#cf222e' }}>wsgi.py</span>
-              </code>
-            </pre>
+        
+        <div className="flex-col" style={{ flex: 1 }}>
+          <div className="card mb-4">
+            <h3 className="flex-row items-center mb-4">
+              <span role="img" aria-label="Serveur" className="emoji mr-4">🖥️</span> Backend
+            </h3>
+            <div className="code-block tree-structure" style={{ height: '24rem', overflow: 'auto' }}>
+              <pre className="text-left">
+                <code>
+                  <span className="directory">backend/</span><br />
+                  ├── <span className="directory">app/</span><br />
+                  │   ├── <span className="file">__init__.py</span><br />
+                  │   ├── <span className="directory">models/</span><br />
+                  │   │   ├── <span className="file">__init__.py</span><br />
+                  │   │   ├── <span className="file">application.py</span><br />
+                  │   │   ├── <span className="file">company.py</span><br />
+                  │   │   ├── <span className="file">job.py</span><br />
+                  │   │   └── <span className="file">user.py</span><br />
+                  │   ├── <span className="directory">routes/</span><br />
+                  │   │   ├── <span className="file">__init__.py</span><br />
+                  │   │   ├── <span className="file">auth.py</span><br />
+                  │   │   ├── <span className="file">companies.py</span><br />
+                  │   │   ├── <span className="file">jobs.py</span><br />
+                  │   │   └── <span className="file">users.py</span><br />
+                  │   ├── <span className="directory">schemas/</span><br />
+                  │   │   ├── <span className="file">__init__.py</span><br />
+                  │   │   ├── <span className="file">application_schema.py</span><br />
+                  │   │   ├── <span className="file">company_schema.py</span><br />
+                  │   │   ├── <span className="file">job_schema.py</span><br />
+                  │   │   └── <span className="file">user_schema.py</span><br />
+                  │   └── <span className="directory">utils/</span><br />
+                  │       ├── <span className="file">__init__.py</span><br />
+                  │       ├── <span className="file">db.py</span><br />
+                  │       └── <span className="file">security.py</span><br />
+                  ├── <span className="file">config.py</span><br />
+                  ├── <span className="file">Dockerfile</span><br />
+                  ├── <span className="file">pyproject.toml</span><br />
+                  └── <span className="file">wsgi.py</span><br />
+                </code>
+              </pre>
+            </div>
           </div>
         </div>
       </div>
-      <p className="text-left mt-4">
+      
+      <p className="text-center mt-6">
         Architecture modulaire favorisant la maintenabilité et la séparation des responsabilités
       </p>
     </Slide>
